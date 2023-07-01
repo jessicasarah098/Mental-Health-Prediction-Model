@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mental Health Assessment</title>
+    <style>
+        body {
+            background-color: #F2F2F2;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            color: #000000;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #C4713E;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #C4713E;
+            color: #FFFFFF;
+            font-size: 15px;
+            padding: 10px 20px;
+            border: None;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .question {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            margin: 0 10px;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Mental Health Assessment</h2>
+
+        <form action="out" method="post">
+
+      
+
+        <div class="question">
+            <p>Please provide your age:</p>
+            <div class="options">
+                <input type="number" name="age" min="18" max="60">
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Please select your gender:</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value='Non-Binary'> Non-binary
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Are you self employed?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="self_employed" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="self_employed" value="No"> No
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Do you have a family history of mental illness?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="family_history" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="family_history" value="No"> No
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>If you have a mental health condition, do you feel that it interferes with your work?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="work_interfere" value="Never"> Never
+                </label>
+                <label>
+                    <input type="radio" name="work_interfere" value="Rarely"> Rarely
+                </label>
+                <label>
+                    <input type="radio" name="work_interfere" value="Sometimes"> Sometimes
+                </label>
+                <label>
+                    <input type="radio" name="work_interfere" value="Often"> Often
+                </label>
+                <label>
+                    <input type="radio" name="work_interfere" value="N/A"> N/A
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Do you work remotely (outside of an office) at least 50% of the time?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="remotely" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="remotely" value="No"> No
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Is your employer primanily a tech company /organization?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="employer" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="employer" value="No"> No
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Does your employer provide mental health benefits?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="benefits" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="benefits" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="benefits" value="Don't know"> Don't know
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Do you kNow the options for mental health care your employer provides?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="care_options" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="care_options" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="care_options" value="Not sure"> Not Sure
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Has your employer ever discussed mental health as part of an employee wellness program?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="wellness_program" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="wellness_program" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="wellness_program" value="Don't know"> Don't know
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Does your employer provide resources to leam more about mental bealth issues and how to seek help?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="seek_help" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="seek_help" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="seek_help" value="Don't know"> Don't know
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Is your aNonymity protected if you choose to take advantage of mental health or substance abuse
+                treatment resources</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="aNonymity" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="aNonymity" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="aNonymity" value="Don't know"> Don't know
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>How easy is it for you to take medical leave for a mental health condition?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="Leave" value="Very easy"> Very Easy
+                </label>
+                <label>
+                    <input type="radio" name="Leave" value="Very difficult"> Very Difficult
+                </label>
+                <label>
+                    <input type="radio" name="Leave" value="Somewhat easy"> Difficult
+                </label>
+                <label>
+                    <input type="radio" name="Leave" value="Somewhat difficult	"> Somewhat Difficult
+                </label>
+                <label>
+                    <input type="radio" name="Leave" value="Don't know"> Don't know
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Do you think that discussing a mental health issue with your employer would have negative consequences
+            </p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="mental_health_consequence" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="mental_health_consequence" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="mental_health_consequence" value="maybe"> Maybe
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Do you think that discussing a physical health issue with your employer would have negative consequences
+            </p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="health_consequence" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="health_consequence" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="health_consequence" value="maybe"> Maybe
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Would you be willing to discuss a mental health issue with your coworkers?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="coworkers" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="coworkers" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="coworkers" value="some of them"> Some Of Them
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Would you be willing to discuss a mental health issue with your direct supervisors?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="supervisor" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="supervisor" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="supervisor" value="some of them"> Some Of Them
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Would you bring up a mental bealth issue with a potential employer in an interview?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="mental_health_interview" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="mental_health_interview" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="mental_health_interview" value="maybe"> Maybe
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Would you bring up a physical health issue with a potential employer in an interview?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="phys_health_interview" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="phys_health_interview" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="phys_health_interview" value="maybe"> Maybe
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Do you feel that your employer takes mental health as seriously as physical health?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="mental_vS_physical" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="mental_vS_physical" value="No"> No
+                </label>
+                <label>
+                    <input type="radio" name="mental_vS_physical" value="Don't know"> Don't know
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>Have you heard of or observed negative consequences for coworkers with mental health conditions
+                in your workplace?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="obs_consequence" value="Yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="obs_consequence" value="No"> No
+                </label>
+            </div>
+        </div>
+        <button type="submit" ">Submit</button>
+
+    </form>
+
+
+
+        <!-- <button onclick="submitForm()">Submit</button> -->
+    </div>
+
+    <script>
+        function submitForm() {
+            // Retrieve user's answers
+            var self_employed = document.querySelector('input[name="self_employed"]:checked').value;
+            var family_history = document.querySelector('input[name="family_history"]:checked').value;
+            var age = document.querySelector('input[name="age"]').value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            const work_interfere = document.querySelector('input[name="work_interfere"]:checked').value
+            const remotely = document.querySelector('input[name="remotely"]:checked').value
+            const employer = document.querySelector('input[name="employer"]:checked').value
+            const benefits = document.querySelector('input[name="benefits"]:checked').value
+
+            const care_options = document.querySelector('input[name="care_options"]:checked').value
+            const wellness_program = document.querySelector('input[name="wellness_program"]:checked').value
+            const seek_help = document.querySelector('input[name="seek_help"]:checked').value
+            const aNonymity = document.querySelector('input[name="aNonymity"]:checked').value
+            const Leave = document.querySelector('input[name="Leave"]:checked').value
+            const mental_health_consequence = document.querySelector('input[name="mental_health_consequence"]:checked').value
+
+            const health_consequence = document.querySelector('input[name="health_consequence"]:checked').value
+            const coworkers = document.querySelector('input[name="coworkers"]:checked').value
+            const supervisor = document.querySelector('input[name="supervisor"]:checked').value
+            const mental_health_interview = document.querySelector('input[name="mental_health_interview"]:checked').value
+            const phys_health_interview = document.querySelector('input[name="phys_health_interview"]:checked').value
+
+            const obs_consequence = document.querySelector('input[name="obs_consequence"]:checked').value
+            const mental_vS_physical = document.querySelector('input[name="mental_vS_physical"]:checked').value
+            // const phys_health_interview = document.querySelector('input[name="phys_health_interview"]:checked').value
+
+            const allData = {
+                "age": age,
+                "gender": gender,
+                "self_employed": self_employed,
+                "family_history": family_history,
+                "work_interfere": work_interfere,
+                "no_employees": 20,
+                "remote_work": remotely,
+                "tech_company": employer,
+                "benefits": benefits,
+                "care_options": care_options,
+                "wellness_program": wellness_program,
+                "seek_help": seek_help,
+                "anonymity": aNonymity,
+                "leave": Leave,
+                "mental_health_consequence": mental_health_consequence,
+                "phys_health_consequence": phys_health_interview,
+                "coworkers": coworkers,
+                "supervisor": supervisor,
+                "mental_health_interview": mental_health_interview,
+                "phys_health_interview": phys_health_interview,
+                "mental_vs_physical": mental_vS_physical,
+                "obs_consequence": obs_consequence
+
+
+            }
+
+
+
+          //  console.log(allData)
+
+            // async function generate() {
+           // console.log("heyyy")
+            fetch("http://127.0.0.1:5000/out", {
+                method: "POST",
+                mode: 'cors',
+                body: JSON.stringify(allData),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+                .then((response) => response.json())
+                .then((json) => {
+
+                    if(json.data == 1){
+                       console.log("paaji talli hai")
+                    } else{
+                        console.log("paaji tali ni hai")
+                        
+                    }
+
+                    
+
+                  //  window.location.href = 'templates\index.html'
+                    console.log(json)
+
+                }
+
+                );
+        }
+
+    //}
+
+    </script>
